@@ -1,3 +1,10 @@
 .lake/
 .DS_Store
 *.aux
+*.paux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+/blueprint/web
