@@ -1,10 +1,36 @@
-.lake/
+## macOS
 .DS_Store
+## Lake
+.lake/*
+.cache/*
+## Blueprint
+/blueprint/print/print.log
+/blueprint/web/
+/blueprint/src/web.paux
+/blueprint/src/web.bbl
+/blueprint/print/
+## TeX
 *.aux
-*.paux
-*.fdb_latexmk
-*.fls
+*.lof
 *.log
+*.lot
+*.fls
 *.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
 *.synctex.gz
-/blueprint/web
+*.synctex.gz(busy)
+*.pdfsync
