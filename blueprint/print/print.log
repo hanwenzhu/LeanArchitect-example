@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  23 NOV 2025 18:27
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  4 FEB 2026 15:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -693,19 +693,35 @@ uild/blueprint/library/Example.tex
 Example/MyNat.tex)
 (/Users/zhw/Developer/lean/lean-architect-example/.lake/build/blueprint/module/
 Example.tex))
+(/Users/zhw/Developer/lean/lean-architect-example/.lake/build/blueprint/module/
+Example/MyNat.artifacts/MyNat.tex)
+(/Users/zhw/Developer/lean/lean-architect-example/.lake/build/blueprint/module/
+Example/MyNat.artifacts/def:nat-add.tex)
+(/Users/zhw/Developer/lean/lean-architect-example/.lake/build/blueprint/module/
+Example/MyNat.artifacts/MyNat.zero_add.tex
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 12.
+(Font)              scaled to size 10.00107pt on input line 7.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 12.
+(Font)              scaled to size 7.00075pt on input line 7.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 12.
+(Font)              scaled to size 5.00053pt on input line 7.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 12.
+(Font)              scaled to size 9.99893pt on input line 7.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 12.
+(Font)              scaled to size 6.99925pt on input line 7.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 12.
-
+(Font)              scaled to size 4.99947pt on input line 7.
+)
+(/Users/zhw/Developer/lean/lean-architect-example/.lake/build/blueprint/module/
+Example/MyNat.artifacts/MyNat.succ_add.tex)
+(/Users/zhw/Developer/lean/lean-architect-example/.lake/build/blueprint/module/
+Example/MyNat.artifacts/MyNat.add_comm.tex)
+(/Users/zhw/Developer/lean/lean-architect-example/.lake/build/blueprint/module/
+Example/MyNat.artifacts/MyNat.mul.tex)
+(/Users/zhw/Developer/lean/lean-architect-example/.lake/build/blueprint/module/
+Example/MyNat.artifacts/MyNat.mul_comm.tex)
+(/Users/zhw/Developer/lean/lean-architect-example/.lake/build/blueprint/module/
+Example/MyNat.artifacts/thm:flt.tex
 
 LaTeX Warning: Citation `Wiles1995' on page 1 undefined on input line 12.
 
@@ -713,7 +729,7 @@ LaTeX Warning: Citation `Wiles1995' on page 1 undefined on input line 12.
 LaTeX Warning: Citation `Taylor-Wiles1995' on page 1 undefined on input line 12
 .
 
-)
+))
 
 [1] (/Users/zhw/Developer/lean/lean-architect-example/blueprint/print/print.aux
 )
@@ -729,13 +745,13 @@ Package rerunfilecheck Info: File `print.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 18347 strings out of 473832
- 347276 string characters out of 5729482
+ 18407 strings out of 473832
+ 353085 string characters out of 5729482
  895329 words of memory out of 5000000
- 41205 multiletter control sequences out of 15000+600000
+ 41236 multiletter control sequences out of 15000+600000
  564152 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,6n,107p,332b,352s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,6n,107p,362b,352s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on /Users/zhw/Developer/lean/lean-architect-example/blueprint/pr
 int/print.pdf (2 pages).

@@ -3,17 +3,8 @@ defaultTargets = ["Example"]
 
 [[require]]
 name = "LeanArchitect"
-git = "https://github.com/hanwenzhu/lean-architect"
+scope = "hanwenzhu"
 rev = "main"
-
-[[require]]
-name = "doc-gen4"
-git = "https://github.com/leanprover/doc-gen4"
-rev = "v4.25.0"
-
-[[require]]
-name = "checkdecls"
-git = "https://github.com/PatrickMassot/checkdecls"
 
 [[lean_lib]]
 name = "Example"
