@@ -1,35 +1,17 @@
-name: Build project
+name: Compile blueprint
+
 on:
   push:
     branches:
-      - main
-    paths:
-      - '**/*.lean'
-      - '**/blueprint.yml'
-      - 'blueprint/**'
-      - 'docs/**'
-      - 'scripts/**'
-      - 'lean-toolchain'
-      - 'lakefile.toml'
-      - 'lake-manifest.json'
-  pull_request:
-    branches:
-      - main
-    paths:
-      - '**/*.lean'
-      - '**/blueprint.yml'
-      - 'blueprint/**'
-      - 'docs/**'
-      - 'scripts/**'
-      - 'lean-toolchain'
-      - 'lakefile.toml'
-      - 'lake-manifest.json'
-  workflow_dispatch: # Allow manual triggering of the workflow from the GitHub Actions interface
+      - {| master_branch |} # Trigger on pushes to the default branch
+  workflow_dispatch:        # Allow manual triggering of the workflow from the GitHub Actions interface
 
-# We do not cancel CI on main so as to keep all commits green (cancelling CI on a commit makes it
-# red).
+# Cancel previous runs if a new commit is pushed to the same PR or branch
+concurrency:
+  group: ${{ github.ref }}  # Group runs by the ref (branch or PR)
+  cancel-in-progress: true  # Cancel any ongoing runs in the same group
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages and modify PR labels
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read          # Read access to repository contents
   pages: write            # Write access to GitHub Pages
@@ -42,18 +24,29 @@ jobs:
     runs-on: ubuntu-latest
     name: Build project
     steps:
+      - name: Cleanup to free disk space
+        uses: jlumbroso/free-disk-space@54081f138730dfa15788a46383842cd2f914a1be # v1.3.0
+        with:
+          tool-cache: false
+          android: true
+          dotnet: false
+          haskell: false
+          large-packages: false
+          docker-images: false
+          swap-storage: false
+
       - name: Checkout project
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           fetch-depth: 0 # Fetch all history for all branches and tags
 
-      - name: Install elan
-        run: curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y
+      - name: Build and lint project
+        uses: leanprover/lean-action@434f25c2f80ded67bba02502ad3a86f25db50709 # 2025-07-02
+        with:
+          build: true
+          build-args: :blueprint
 
-      - name: Build project and generate blueprint
-        run: ~/.elan/bin/lake build :blueprint
-
-      - uses: leanprover-community/docgen-action@deed0cdc44dd8e5de07a300773eb751d33e32fc8 # 2025-10-26
+      - name: Compile blueprint and documentation
+        uses: leanprover-community/docgen-action@deed0cdc44dd8e5de07a300773eb751d33e32fc8 # 2025-10-26
         with:
           blueprint: true
-          homepage: home_page
