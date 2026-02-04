@@ -18,14 +18,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: lean-architect-example
+title: LeanArchitect-example
 #email: your-email@example.com
 description: by Thomas Zhu
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://hanwenzhu.github.io/lean-architect-example" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://hanwenzhu.github.io/LeanArchitect-example" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username: hanwenzhu
-repository: hanwenzhu/lean-architect-example
+repository: hanwenzhu/LeanArchitect-example
 
 # Build settings
 remote_theme: pages-themes/cayman@v0.2.0
