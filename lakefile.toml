@@ -6,5 +6,9 @@ name = "LeanArchitect"
 scope = "hanwenzhu"
 rev = "main"
 
+[[require]]
+name = "checkdecls"
+scope = "PatrickMassot"
+
 [[lean_lib]]
 name = "Example"
